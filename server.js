@@ -16,9 +16,9 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: {
-    secure: true,
-    sameSite: "none"
-  }
+  secure: true,
+  sameSite: "lax"
+}
 }));
 
 app.use(express.static(__dirname));
