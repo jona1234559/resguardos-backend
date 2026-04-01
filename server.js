@@ -9,6 +9,8 @@ app.use(cors({
   origin: true,
   credentials: true
 }));
+app.set("trust proxy", 1);
+
 app.use(express.json());
 
 app.use(session({
@@ -16,11 +18,10 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: {
-  secure: true,
-  sameSite: "lax"
-}
+    secure: true,
+    sameSite: "none"
+  }
 }));
-
 app.use(express.static(__dirname));
 
 /* LOGIN PAGE */
