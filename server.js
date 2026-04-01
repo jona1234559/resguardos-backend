@@ -6,7 +6,7 @@ const session = require("express-session");
 const app = express();
 
 app.use(cors({
-  origin: "https://taupe-brigadeiros-47c42d.netlify.app",
+  origin: "https://eloquent-salamander-38bf24.netlify.app",
   credentials: true
 }));
 app.use(express.json());
